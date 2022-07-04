@@ -1,20 +1,71 @@
 {
-  "name": "miracle",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6"
-  }
+   "name": "miracle",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "devInspect": "cross-env NODE_OPTIONS='--inspect' next dev",
+      "build": "next build",
+      "start": "ts-node src/index.ts",
+      "lint": "next lint",
+      "generate": "graphql-codegen",
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "test": "jest --watch",
+      "test:ci": "jest --ci"
+   },
+   "dependencies": {
+      "@mantine/core": "^4.2.10",
+      "@mantine/hooks": "^4.2.10",
+      "@mantine/next": "^4.2.10",
+      "apollo-server-micro": "^3.9.0",
+      "class-validator": "^0.13.2",
+      "cross-env": "^7.0.3",
+      "crypto-js": "^4.1.1",
+      "emotion": "^11.0.0",
+      "graphql": "^15.3.0",
+      "jsonwebtoken": "^8.5.1",
+      "micro": "^9.3.4",
+      "next": "12.1.6",
+      "next-auth": "^4.6.1",
+      "react": "18.2.0",
+      "react-dom": "18.2.0",
+      "react-query": "^3.39.1",
+      "reflect-metadata": "^0.1.10",
+      "stream": "^0.0.2",
+      "tabler-icons-react": "^1.51.0",
+      "type-graphql": "^1.1.1",
+      "typeorm": "0.2.38",
+      "mysql": "^2.14.1"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.18.5",
+      "@graphql-codegen/cli": "^2.6.2",
+      "@graphql-codegen/typescript": "^2.5.1",
+      "@graphql-codegen/typescript-graphql-request": "^4.4.10",
+      "@graphql-codegen/typescript-operations": "^2.4.2",
+      "@storybook/addon-actions": "^6.5.9",
+      "@storybook/addon-essentials": "^6.5.9",
+      "@storybook/addon-interactions": "^6.5.9",
+      "@storybook/addon-links": "^6.5.9",
+      "@storybook/builder-webpack5": "^6.5.9",
+      "@storybook/manager-webpack5": "^6.5.9",
+      "@storybook/react": "^6.5.9",
+      "@storybook/testing-library": "^0.0.13",
+      "@testing-library/jest-dom": "^5.16.4",
+      "@testing-library/react": "^13.3.0",
+      "@testing-library/user-event": "^14.2.1",
+      "@types/node": "^8.0.29",
+      "@types/react": "^18.0.14",
+      "babel-loader": "^8.2.5",
+      "eslint": "8.18.0",
+      "eslint-config-next": "12.1.6",
+      "jest": "^28.1.1",
+      "jest-environment-jsdom": "^28.1.1",
+      "typescript": "3.3.3333",
+      "ts-node": "3.3.0"
+   },
+   "browser": {
+      "crypto": false
+   }
 }
