@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "es5", "es6", "es2018", "esnext"],
     "baseUrl": ".",
     "allowJs": true,

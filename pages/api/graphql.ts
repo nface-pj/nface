@@ -3,8 +3,7 @@ import { ApolloServer } from "apollo-server-micro";
 import { buildSchema } from "type-graphql";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { DogsResolver } from "../../src/schema/dogs.resolver";
-import { Connection, createConnection, createConnections } from "typeorm";
-import connection from "../../src/typeorm/db";
+import "../../src/typeorm/db";
 
 const schema = await buildSchema({
   resolvers: [DogsResolver],
@@ -21,9 +20,6 @@ export const config = {
 };
 
 const startServer = server.start();
-
-connection.createDatabase();
-connection.create();
 
 export default async function handler(
   req: NextApiRequest,
